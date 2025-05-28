@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [field:SerializeField] 
+    [field:SerializeField,
+    Header("Movement Speed")] 
     public float _speed { get; private set; }
 
     private Vector2 _dir;
