@@ -1,0 +1,14 @@
+.mana-progress-bar {
+    height: 20px;
+    background-color: rgb(34, 34, 34);
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgb(255, 0, 0);
+    margin: 5px;
+    top: 95%;
+}
+
+.mana-progress-bar .unity-progress-bar__progress {
+    background-color: rgb(90, 221, 255);
+    border-radius: 5px;
+}
