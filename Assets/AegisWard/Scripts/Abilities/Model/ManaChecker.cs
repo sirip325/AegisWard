@@ -15,13 +15,13 @@ namespace AegisWard.Scripts.Abilities.Model
         }
         public override bool Check(IAbility ability)
         {
-            if (ability.manaCost <= _playerStats.currentMana && _nextChecker != null)
+            if (ability.manaCost <= _playerStats.currentMana.Value && _nextChecker != null)
             {
                 Debug.Log("Will be used the next checker");
                 return _nextChecker.Check(ability);
                 
             }
-            else if (ability.manaCost <= _playerStats.currentMana && _nextChecker == null)
+            else if (ability.manaCost <= _playerStats.currentMana.Value && _nextChecker == null)
             {
                 Debug.Log("It is last checker");
                 return true;

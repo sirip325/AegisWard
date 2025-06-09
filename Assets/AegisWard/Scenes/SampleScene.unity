@@ -878,8 +878,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc2d07b70e927b499e648b242a07fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMana: 100
-  currentMana: 0
+  maxMana:
+    value: 100
+  currentMana:
+    value: 0
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0

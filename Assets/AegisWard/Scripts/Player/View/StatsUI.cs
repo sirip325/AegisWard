@@ -1,31 +1,39 @@
 using System;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Random = UnityEngine.Random;
 
 public class StatsUI : MonoBehaviour
 {
     private VisualElement root;
-    private ProgressBar _progressBar;
+    private ProgressBar _manaBar;
 
     private void OnEnable()
     {
         root = GetComponent<UIDocument>().rootVisualElement;
     }
     
-    private void Start()
+    public void Init()
     {
-        _progressBar = root.Q<ProgressBar>("ManaBar");
+        _manaBar = root.Q<ProgressBar>("ManaBar");
     }
 
-    private void Update()
+    public void ChangeFillAmount(float amount)
     {
-        TestBar();
+        if(amount < 0 || amount > _manaBar.highValue) return;
+        _manaBar.value = amount;
     }
-    public void TestBar()
+
+    public float SetManaHighValue(float value)
     {
-        if (_progressBar != null)
-        {
-            _progressBar.value = Mathf.Clamp(_progressBar.value + Time.deltaTime, 0, 100);
-        }
+        Debug.Log(_manaBar);
+        print(_manaBar.highValue);
+        _manaBar.highValue = value;
+        return value;
+    }
+
+    public float GetHighValue()
+    {
+        return _manaBar.highValue;
     }
 }

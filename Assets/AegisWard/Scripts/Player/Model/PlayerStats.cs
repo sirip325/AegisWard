@@ -1,14 +1,15 @@
+using UniRx;
 using UnityEngine;
 
 namespace AegisWard.Scripts.Player.Model
 {
     public class PlayerStats : MonoBehaviour
     {
-        public float maxMana,currentMana;
+        public ReactiveProperty<float> maxMana,currentMana;
 
         public void Init()
         {
-            currentMana = maxMana;
+            currentMana.Value = maxMana.Value;
         }
     }
 }
