@@ -18,7 +18,7 @@ public class StatsUI : MonoBehaviour
         _manaBar = root.Q<ProgressBar>("ManaBar");
     }
 
-    public void ChangeFillAmount(float amount)
+    public void ChangeManaFillAmount(float amount)
     {
         if(amount < 0 || amount > _manaBar.highValue) return;
         _manaBar.value = amount;
@@ -32,7 +32,7 @@ public class StatsUI : MonoBehaviour
         return value;
     }
 
-    public float GetHighValue()
+    public float GetManaHighValue()
     {
         return _manaBar.highValue;
     }

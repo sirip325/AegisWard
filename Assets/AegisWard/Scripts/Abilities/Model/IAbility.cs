@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace AegisWard.Scripts.Abilities.Model
 {
     
@@ -6,6 +8,10 @@ namespace AegisWard.Scripts.Abilities.Model
         float manaCost { get; set; }
         float damage { get; set; }
         float duration { get; set; }
+        GameObject prefab { get; set; }
+        Transform playerTransform { get; set; }
+        float cooldown { get; set; }
+        float timer { get; set; }
         
         void Execute();
     }

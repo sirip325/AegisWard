@@ -27,8 +27,8 @@ public class StatsViewModel
         _playerStats.currentMana.Subscribe(OnManaChanged);
         
         var highManaValue = _statsUI.SetManaHighValue(_playerStats.maxMana.Value);
-        _statsUI.ChangeFillAmount(highManaValue);
-        Debug.Log(_statsUI.GetHighValue());
+        _statsUI.ChangeManaFillAmount(highManaValue);
+        Debug.Log(_statsUI.GetManaHighValue());
     }
 
     private void OnMaxManaChanged(float newValue)
@@ -39,6 +39,6 @@ public class StatsViewModel
     
     private void OnManaChanged(float newValue)
     {
-        _statsUI.ChangeFillAmount(newValue);
+        _statsUI.ChangeManaFillAmount(newValue);
     }
 }

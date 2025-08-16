@@ -21,4 +21,9 @@ public class PlayerMovement : MonoBehaviour
     {
         _dir = context.ReadValue<Vector2>();
     }
+
+    public void OnShift(InputAction.CallbackContext context)
+    {
+        
+    }
 }

@@ -11,6 +11,7 @@ public class GameEntryPoint : IStartable
     private PlayerStats _playerStats;
     private StatsViewModel _statsViewModel;
     
+    
     [Inject]
     public GameEntryPoint(PlayerStats playerStats, StatsViewModel statsViewModel)
     {
@@ -29,4 +30,17 @@ public class GameEntryPoint : IStartable
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
+
+    /*private void UseFireball()
+    {
+        var fireball = new FireBall(_fireballPrefab, _playerStats.transform,100f);
+        var manaChecker = new ManaChecker(_playerStats);
+        
+        Debug.Log($"Mana Cost is:{fireball.manaCost}");
+        Debug.Log($"Current Mana is{_playerStats.currentMana}");
+        var checkResult = manaChecker.Check(fireball);
+        Debug.Log(checkResult);
+        
+        fireball.Execute();
+    }*/
 }
