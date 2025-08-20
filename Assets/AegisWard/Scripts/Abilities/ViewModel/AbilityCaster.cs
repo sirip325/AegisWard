@@ -5,23 +5,24 @@ using UnityEngine;
 using AegisWard.Scripts.Abilities.Model;
 using AegisWard.Scripts.Player.Model;
 using TMPro;
+using UniRx;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.HID;
 using VContainer;
 
 public class AbilityCaster : MonoBehaviour
 {
+    
     [SerializeField]private List<AbilityContext> abilityContexts;
-    private List<IAbility> abilities = new List<IAbility>();
     private InputSystem_Actions inputSystemActions;
     
     [Inject]
     private PlayerStats playerStats;
 
+    public List<IAbility> Abilities = new List<IAbility>();
 
 
-
-    private void Start()
+    private void Awake()
     {
         AddAbilitiesToList();
         
@@ -54,10 +55,9 @@ public class AbilityCaster : MonoBehaviour
             {
                 instance.Initialize(abilityContext,playerStats,gameObject.transform);
             }
-            abilities.Add(ability);
-            Debug.Log(abilities.Count);
+            Abilities.Add(ability);
+            Debug.Log(Abilities.Count);
         }
-
         
     }
 
@@ -72,14 +72,14 @@ public class AbilityCaster : MonoBehaviour
         
         manaChecker.SetNext(cooldownChecker);
 
-        bool result = manaChecker.Check(abilities[pressedKey.ToIntArray()[0] - 49]);
+        bool result = manaChecker.Check(Abilities[pressedKey.ToIntArray()[0] - 49]);
         
         print($"Check result: {result}");
         
         if (result)
         {
             
-            abilities[pressedKey.ToIntArray()[0]-49].Execute();
+            Abilities[pressedKey.ToIntArray()[0]-49].Execute();
         }
            
     }

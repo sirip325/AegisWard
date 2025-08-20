@@ -1,3 +1,4 @@
+using UniRx;
 using UnityEngine;
 
 namespace AegisWard.Scripts.Abilities.Model
@@ -11,7 +12,7 @@ namespace AegisWard.Scripts.Abilities.Model
         GameObject prefab { get; set; }
         Transform playerTransform { get; set; }
         float cooldown { get; set; }
-        float timer { get; set; }
+        ReactiveProperty<float> timer { get; set; }
         
         void Execute();
     }

@@ -13,6 +13,8 @@ public class GameLifetimeScope : LifetimeScope
         builder.RegisterComponentInHierarchy<StatsUI>();
         builder.Register<StatsViewModel>(Lifetime.Singleton);
         builder.RegisterComponentInHierarchy<AbilityCaster>();
+        builder.RegisterComponentInHierarchy<AbilityBarUI>();
+        builder.RegisterComponentInHierarchy<AbilityBarChanger>();
         
         
         builder.RegisterEntryPoint<GameEntryPoint>();

@@ -717,6 +717,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0f7376e1-d3cf-43f3-9e9a-11392a26414d
+    m_ActionName: 'Player/Cast[/Keyboard/1,/Keyboard/2,/Keyboard/3,/Keyboard/4]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -896,6 +900,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityContexts:
+  - {fileID: 11400000, guid: e3152279e7cf673499acaab2ce55ffa8, type: 2}
+  - {fileID: 11400000, guid: e3152279e7cf673499acaab2ce55ffa8, type: 2}
+  - {fileID: 11400000, guid: e3152279e7cf673499acaab2ce55ffa8, type: 2}
+  - {fileID: 11400000, guid: e3152279e7cf673499acaab2ce55ffa8, type: 2}
+  - {fileID: 11400000, guid: e3152279e7cf673499acaab2ce55ffa8, type: 2}
+  - {fileID: 11400000, guid: e3152279e7cf673499acaab2ce55ffa8, type: 2}
+  - {fileID: 11400000, guid: e3152279e7cf673499acaab2ce55ffa8, type: 2}
+  - {fileID: 11400000, guid: e3152279e7cf673499acaab2ce55ffa8, type: 2}
   - {fileID: 11400000, guid: e3152279e7cf673499acaab2ce55ffa8, type: 2}
 --- !u!1 &832575517
 GameObject:
@@ -1357,6 +1369,8 @@ GameObject:
   - component: {fileID: 1615770231}
   - component: {fileID: 1615770230}
   - component: {fileID: 1615770232}
+  - component: {fileID: 1615770233}
+  - component: {fileID: 1615770234}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -1408,6 +1422,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d131f883917e97478dc73f3c759f209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1615770233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615770229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722320adda7ae40428cd99d1870a947d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &1615770234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615770229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76251550c2d7f9b40941a7697ab2038b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
