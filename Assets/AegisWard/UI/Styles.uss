@@ -16,9 +16,8 @@
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
     width: 600px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 
@@ -62,5 +61,25 @@
     background-size: 1px;
     overflow: hidden;
     background-color: darkblue;
+    border-radius: 5px;
+}
+
+.health-progress-bar {
+    height: 8px;
+    width: 60%;
+    background-color: rgb(34, 34, 34);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.health-progress-bar .unity-progress-bar__progress {
+    background-color: rgb(255, 0, 0);
+    border-radius: 5px;
+}
+
+.health-progress-bar .unity-progress-bar__background {
+    background-size: 1px;
+    overflow: hidden;
+    background-color: #710000;
     border-radius: 5px;
 }

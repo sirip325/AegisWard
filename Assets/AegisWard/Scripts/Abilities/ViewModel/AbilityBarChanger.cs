@@ -11,11 +11,24 @@ public class AbilityBarChanger : MonoBehaviour
 
     private void Start()
     {
+        SubscribeToAbilities();
+        UpdateIcons();
+    }
+
+    private void UpdateIcons()
+    {
+        for(int i = 0; i < caster.Abilities.Count; i++)
+        {
+            int index = i;
+            SetSlotIcon(index,caster.Abilities[i].icon);
+        }
+    }
+    private void SubscribeToAbilities()
+    {
         for(int i = 0; i < caster.Abilities.Count; i++)
         {
             int index = i;
             caster.Abilities[i].timer.Subscribe(value => SetSlotCooldown(index,value)).AddTo(this);
-            SetSlotIcon(index,caster.Abilities[i].icon);
         }
     }
 

@@ -6,8 +6,6 @@ namespace AegisWard.Scripts.Abilities.Model
 {
     public class FireBallAbility : Ability
     {
-        
-        
         public override void Execute()
         { 
             base.Execute();

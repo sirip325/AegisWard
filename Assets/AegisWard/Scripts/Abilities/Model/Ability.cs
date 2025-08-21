@@ -38,7 +38,6 @@ namespace AegisWard.Scripts.Abilities.Model
         {
             
             timer.Value = cooldown;
-            Debug.Log($"Cooldown is:{timer.Value}");
             StartCooldown();
         }
 

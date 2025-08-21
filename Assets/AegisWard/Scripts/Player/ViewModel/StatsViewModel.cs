@@ -14,9 +14,6 @@ public class StatsViewModel
         _statsUI = statsUI;
         
         _playerStats = playerStats;
-
-
-
     }
 
     public void Init()

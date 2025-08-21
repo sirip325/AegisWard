@@ -13,6 +13,10 @@
             <engine:VisualElement name="AbilitySlot9" class="ability-slot" />
         </engine:VisualElement>
         
+        <engine:ProgressBar value="100" name="HealthBar" class="health-progress-bar"/>
         <engine:ProgressBar value="50" name="ManaBar" class="mana-progress-bar" />
+        
+        
+        
     </engine:VisualElement>
 </engine:UXML>
