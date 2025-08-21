@@ -148,6 +148,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1332183400431529639}
+  - component: {fileID: 1557600103682220959}
+  - component: {fileID: 6822855806311338395}
   m_Layer: 0
   m_Name: vfx_FireBall1
   m_TagString: Untagged
@@ -173,6 +175,40 @@ Transform:
   - {fileID: 4569808405594199437}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1557600103682220959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2742820867094935354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a20d300d33e396d45a5fc83a0a1f0395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exploisonPrefab: {fileID: 151872180342736272, guid: 417a2fd3a60008f419cf1d3b5865a5ec, type: 3}
+--- !u!135 &6822855806311338395
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2742820867094935354}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3745069978472552751
 GameObject:
   m_ObjectHideFlags: 0

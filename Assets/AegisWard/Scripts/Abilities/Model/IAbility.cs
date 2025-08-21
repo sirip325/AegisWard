@@ -13,6 +13,7 @@ namespace AegisWard.Scripts.Abilities.Model
         Transform playerTransform { get; set; }
         float cooldown { get; set; }
         ReactiveProperty<float> timer { get; set; }
+        Sprite icon { get; set; }
         
         void Execute();
     }

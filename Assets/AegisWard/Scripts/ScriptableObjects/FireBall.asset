@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: AegisWard.Scripts.Abilities.Model.FireBall
   prefab: {fileID: 2742820867094935354, guid: 8c0a684629027a143b2c8c4134fcb220, type: 3}
-  sprite: {fileID: 0}
   damage: 50
   manaCost: 10
-  playerTransform: {fileID: 0}
   cooldown: 5
   duration: 0
+  icon: {fileID: -1150069600, guid: 2a764e8e04dfbb24a8211c5f15b62912, type: 3}

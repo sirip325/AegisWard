@@ -9,11 +9,10 @@ namespace AegisWard.Scripts.Abilities.Model
         public string abilityName;
         
         public GameObject prefab;
-        public Sprite sprite;
         public float damage;
         public float manaCost;
-        public Transform playerTransform;
         public float cooldown;
         public float duration;
+        public Sprite icon;
     }
 }

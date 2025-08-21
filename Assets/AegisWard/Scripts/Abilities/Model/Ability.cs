@@ -16,9 +16,8 @@ namespace AegisWard.Scripts.Abilities.Model
         public GameObject prefab { get; set; }
         public Transform playerTransform { get; set; }
         public float cooldown { get; set; }
-
         public ReactiveProperty<float> timer { get; set; }
-        
+        public Sprite icon { get; set; }
         
         public PlayerStats playerStats;
 
@@ -31,6 +30,7 @@ namespace AegisWard.Scripts.Abilities.Model
             this.playerStats = playerStats;
             this.cooldown = abilityContext.cooldown;
             this.playerTransform = playerTransform;
+            this.icon = abilityContext.icon;
             
             timer = new ReactiveProperty<float>();
         }

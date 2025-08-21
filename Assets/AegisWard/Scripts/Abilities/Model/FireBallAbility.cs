@@ -4,7 +4,7 @@ using VContainer;
 
 namespace AegisWard.Scripts.Abilities.Model
 {
-    public class FireBall : Ability
+    public class FireBallAbility : Ability
     {
         
         
@@ -12,12 +12,12 @@ namespace AegisWard.Scripts.Abilities.Model
         { 
             base.Execute();
             
-            var obj = Object.Instantiate(prefab, playerTransform.position, playerTransform.rotation);
+            var obj = Object.Instantiate(prefab, playerTransform.position + playerTransform.forward, playerTransform.rotation);
             Rigidbody rb = obj.AddComponent<Rigidbody>().GetComponent<Rigidbody>();
 
             playerStats.currentMana.Value -= manaCost;
             
-            rb.linearVelocity = Camera.main.transform.forward * 100f;
+            rb.linearVelocity = Camera.main.transform.forward * 50f;
             
         }
     }

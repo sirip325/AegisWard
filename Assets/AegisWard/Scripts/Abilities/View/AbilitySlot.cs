@@ -19,8 +19,8 @@ public class AbilitySlot
         
         _icon = new Image();
         _icon.scaleMode = ScaleMode.ScaleToFit;
-        _icon.style.width = 180;
-        _icon.style.height = 180;
+        _icon.style.width = 200;
+        _icon.style.height = 200;
         
 
         root.Add(_icon);

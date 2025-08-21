@@ -12,27 +12,25 @@ using VContainer;
 
 public class AbilityCaster : MonoBehaviour
 {
-    
     [SerializeField]private List<AbilityContext> abilityContexts;
     private InputSystem_Actions inputSystemActions;
     
     [Inject]
     private PlayerStats playerStats;
 
-    public List<IAbility> Abilities = new List<IAbility>();
+    public List<IAbility> Abilities = new List<IAbility>(9);
 
 
     private void Awake()
     {
-        AddAbilitiesToList();
-        
+        AddAbilitiesToList(abilityContexts);
     }
     
-    private void AddAbilitiesToList()
+    public void AddAbilitiesToList(List<AbilityContext> contexts)
     {
-        foreach (var abilityContext in abilityContexts)
+        foreach (var abilityContext in contexts)
         {
-            var name = abilityContext.abilityName;
+            var name = abilityContext.abilityName + "Ability";
             Type type = Type.GetType(name);
             Debug.Log(type);
             
@@ -56,9 +54,9 @@ public class AbilityCaster : MonoBehaviour
                 instance.Initialize(abilityContext,playerStats,gameObject.transform);
             }
             Abilities.Add(ability);
+            
             Debug.Log(Abilities.Count);
         }
-        
     }
 
     private void CastAbility(InputAction.CallbackContext context)
