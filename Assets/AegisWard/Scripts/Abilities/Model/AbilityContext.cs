@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace AegisWard.Scripts.Abilities.Model
 {
-    [CreateAssetMenu(fileName = "New Ability Context", menuName = "Ability Context")]
+    [CreateAssetMenu(fileName = "New Ability Context", menuName = "New Scriptable Object/Ability Context")]
     public class AbilityContext : ScriptableObject
     {
         public string abilityName;

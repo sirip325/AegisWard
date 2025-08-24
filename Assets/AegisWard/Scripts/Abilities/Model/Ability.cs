@@ -46,7 +46,6 @@ namespace AegisWard.Scripts.Abilities.Model
             while (timer.Value > 0)
             {
                 timer.Value -= Time.deltaTime;
-                Debug.Log(timer.Value);
                 await UniTask.Yield();
             }
             await UniTask.WaitUntil(() => timer.Value <= 0f);
