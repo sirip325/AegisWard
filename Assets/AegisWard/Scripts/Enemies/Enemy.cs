@@ -1,14 +1,10 @@
 using UnityEngine;
 
-public abstract class Enemy
+public abstract class Enemy : MonoBehaviour
 {
-    public EnemyContext Context { get; private set; }
-
-    public Enemy(EnemyContext context)
-    {
-        Context = context;
-    }
-
+    [field: SerializeField]public EnemyContext Context { get; private set; }
+    
+    
     public abstract void Attack(float damage, Health targetHealth);
 
     protected virtual void OnHit(float damage)

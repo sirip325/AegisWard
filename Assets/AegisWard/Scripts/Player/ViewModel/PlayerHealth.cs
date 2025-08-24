@@ -1,7 +1,7 @@
 using UniRx;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour, IHittable
 {
     [SerializeField]private float _maxHP;
     
@@ -23,4 +23,6 @@ public class PlayerHealth : MonoBehaviour
     {
         _healthBarUI.ChangeHealthFillAmount(newValue);
     }
+
+    public Health Health => _playerHealthData._health;
 }

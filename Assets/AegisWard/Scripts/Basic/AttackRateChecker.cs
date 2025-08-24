@@ -8,6 +8,7 @@ public class AttackRateChecker : AttackChecker
     private float _attackRate;
     
     private bool _isRunning;
+    
     public AttackRateChecker(float rate)
     {
         this._attackRate = rate;
@@ -15,17 +16,18 @@ public class AttackRateChecker : AttackChecker
     
     public override bool Check()
     {
-        if(_isRunning) return false;
+        if (_isRunning)
+            return false;
         
+        _isRunning = true;
         
         StartTimer().Forget();
-
+        
         if (_nextChecker != null)
         {
             Debug.Log("Will Be Used Next Checker");
             return _nextChecker.Check();
         }
-        Debug.Log("True");
         return true;
     }
 
@@ -33,10 +35,10 @@ public class AttackRateChecker : AttackChecker
     
     private async UniTaskVoid StartTimer()
     {
-        _isRunning = true;
+        
         await UniTask.Delay(TimeSpan.FromSeconds(_attackRate));
         _isRunning = false;
         
-        Debug.Log("Cooldown finished!");
+        Debug.Log("Can Attack Now");
     }
 }
