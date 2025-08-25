@@ -1,7 +1,7 @@
 using UniRx;
 using UnityEngine;
 
-public class TowerHealthUpdater : MonoBehaviour
+public class TowerHealthUpdater : MonoBehaviour, IHittable
 {
     [SerializeField]private TowerHealth_UI _ui;
     [SerializeField]private float _maxHealth;
@@ -21,4 +21,6 @@ public class TowerHealthUpdater : MonoBehaviour
     {
         _ui.SetHealth(bar,newValue, maxValue);
     }
+
+    public Health Health => _health;
 }

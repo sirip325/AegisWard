@@ -14,6 +14,7 @@ public class Jump : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         if(!_isGrounded) return;
+        
         _rb.AddForce(transform.up * _jumpForce, ForceMode.Impulse);
     }
 

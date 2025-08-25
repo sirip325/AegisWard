@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Knight
   m_EditorClassIdentifier: 
   damage: 10
-  range: 0
+  range: 2
   fireRate: 1
   speed: 10
