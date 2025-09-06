@@ -8,4 +8,6 @@ public class EnemyContext : ScriptableObject
     public float range;
     public float fireRate;
     public float speed;
+    public float reward;
+    public float rewardFactor;
 }

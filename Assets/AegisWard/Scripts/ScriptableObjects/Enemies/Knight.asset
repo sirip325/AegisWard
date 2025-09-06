@@ -16,3 +16,5 @@ MonoBehaviour:
   range: 2
   fireRate: 1
   speed: 10
+  reward: 50
+  rewardFactor: 0.2

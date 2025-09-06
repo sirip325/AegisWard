@@ -83,3 +83,58 @@
     background-color: #710000;
     border-radius: 5px;
 }
+.money-panel{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    background-color: darkgray;
+}
+.money-text{
+    position: absolute;
+    left: 45%;
+    width: 50%;
+    height: 50%;
+    -unity-text-align: middle-center;
+    color: gold;
+    font-size: 25px;
+    
+}
+.money-image{
+    position: absolute;
+    left:0;
+    width: 50%;
+    height: 100%;
+    background-image: resource("Images/moneyImage");
+    background-size: contain;
+    background-position: center;
+}
+.shop-panel {
+    position: absolute;
+    top: 50px;
+    left: -300px;       
+    width: 300px;
+    height: 80%;
+    background-color: rgba(128, 128, 128, 0.8);
+    transition: left 0.3s ease;  
+    flex-direction: column;
+    padding: 10px;
+}
+
+.shop-panel.open {
+    left: 0;            
+}
+
+.shop-title {
+    color: white;
+    font-size: 24px;
+    -unity-font-style: bold;
+    margin-bottom: 10px;
+    -unity-text-align: middle-center;
+}

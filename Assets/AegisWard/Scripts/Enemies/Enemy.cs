@@ -7,12 +7,15 @@ public abstract class Enemy : MonoBehaviour
     
     protected IAttackChecker _attackRateChecker;
     
+    private PathFinder _pathFinder;
+    
     protected abstract void Attack(float damage, Health targetHealth);
 
     
     private void Start()
     {
         _attackRateChecker = new AttackRateChecker(Context.fireRate);
+        _pathFinder = GetComponent<PathFinder>();
     }
     
     protected virtual void OnHit(float damage)
@@ -34,12 +37,22 @@ public abstract class Enemy : MonoBehaviour
         
         if (hit == null) return;
         
+        
+        
         if (hit.gameObject.TryGetComponent(out IHittable hittable))
         {
+            ChangeTarget(hit.transform);
             if (_attackRateChecker.Check()) 
             {
                 Attack(Context.damage, hittable.Health);
             }
         }
     }
+
+    private void ChangeTarget(Transform newTarget)
+    {
+        _pathFinder.ChangeTarget(newTarget);
+    }
+    
+    
 }
