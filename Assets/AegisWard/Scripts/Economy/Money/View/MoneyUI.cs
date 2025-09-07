@@ -18,7 +18,6 @@ public class MoneyUI : MonoBehaviour
       _moneyLabel = _root.Q<Label>("MoneyText");
       print(_moneyLabel);
       Money.Instance.Amount.Subscribe(UpdateMoneyText);
-      UpdateMoneyText(0f);
    }
 
    private void UpdateMoneyText(float newValue)

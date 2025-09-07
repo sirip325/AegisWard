@@ -8,9 +8,12 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]private Transform[] mazles = new Transform[2];
     [SerializeField] private List<Enemy> enemies = new List<Enemy>();
-    
-    
-    
+
+
+    private void Start()
+    {
+        SpawnEnemies(enemies,CalculateSpawningPosition(mazles));
+    }
     
     private Vector3 CalculateSpawningPosition(Transform[] mazles)
     {
@@ -38,7 +41,8 @@ public class EnemySpawner : MonoBehaviour
     {
         int index = UnityEngine.Random.Range(0, enemies.Count);
         
-        Instantiate(enemies[index], position, Quaternion.identity);
+        var _ = Instantiate(enemies[index], position, Quaternion.identity);
+        
     }
 
     private void OnDrawGizmos()
