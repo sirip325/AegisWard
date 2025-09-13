@@ -15,6 +15,7 @@ public class GameLifetimeScope : LifetimeScope
         builder.RegisterComponentInHierarchy<AbilityCaster>();
         builder.RegisterComponentInHierarchy<AbilityBarUI>();
         builder.RegisterComponentInHierarchy<AbilityBarChanger>();
+        builder.RegisterComponentInHierarchy<PlayerHealth>();
         
         
         builder.RegisterEntryPoint<GameEntryPoint>();
