@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94f1dc5f2b35054e9e19cd0bd3d9d81, type: 3}
   m_Name: Meat
   m_EditorClassIdentifier: 
-  cost: 500
-  icon: {fileID: 0}
+  cost: 250
+  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   additionalHealth: 50
-  addHealthAfterUse: 100
+  addHealthAfterUse: 75

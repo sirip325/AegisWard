@@ -1046,6 +1046,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1153015985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &234660746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 234660748}
+  - component: {fileID: 234660747}
+  m_Layer: 0
+  m_Name: Inventory Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &234660747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234660746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7aba13d819f4144687a76d84ee1ea81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &234660748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234660746}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 50.09597, y: 25.760094, z: -13.447377}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,6 +2049,7 @@ MonoBehaviour:
     TypeName: 
   autoRun: 1
   autoInjectGameObjects: []
+  meatSO: {fileID: 11400000, guid: 59d8f41a00ee2ae448a69fff005673f3, type: 2}
 --- !u!4 &1038681868
 Transform:
   m_ObjectHideFlags: 0
@@ -3449,6 +3494,7 @@ GameObject:
   - component: {fileID: 1615770234}
   - component: {fileID: 1615770236}
   - component: {fileID: 1615770237}
+  - component: {fileID: 1615770238}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -3561,6 +3607,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6ff614a8f27c484f9111ec669e407ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 11400000, guid: 59d8f41a00ee2ae448a69fff005673f3, type: 2}
+--- !u!114 &1615770238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615770229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d19baecc767e1b24e92149904d1a218a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1904888225
@@ -4829,3 +4889,4 @@ SceneRoots:
   - {fileID: 3951516826845242881}
   - {fileID: 1343176287}
   - {fileID: 1186784766}
+  - {fileID: 234660748}

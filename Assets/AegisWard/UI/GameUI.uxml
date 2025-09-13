@@ -1,17 +1,15 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/AegisWard/UI/Styles.uss?fileID=7433441132597879392&amp;guid=08c797b967d766148b6562078c227dba&amp;type=3#Styles" />
     <engine:VisualElement name="Root" class="root">
-        
         <engine:VisualElement name="shopPanel" class="shop-panel">
-            <engine:Label text="Магазин" class="shop-title" />
-            
+            <engine:GroupBox name="itemGroupBox" class="shop-groupBox">
+                
+            </engine:GroupBox>
         </engine:VisualElement>
-        
         <engine:VisualElement name="MoneyPanel" enabled="true" class="money-panel" style="margin-bottom: 10px;">
-            <engine:Label name="MoneyText" class="money-text" text="9999999"/>
-            <engine:Image name="MoneyImage" class="money-image"/>
+            <engine:Label name="MoneyText" text="9999999" class="money-text" />
+            <engine:Image name="MoneyImage" class="money-image" />
         </engine:VisualElement>
-        
         <engine:VisualElement name="AbilitiesPanel" enabled="true" class="abilities-panel" style="margin-bottom: 10px;">
             <engine:VisualElement name="AbilitySlot1" class="ability-slot" />
             <engine:VisualElement name="AbilitySlot2" class="ability-slot" />
@@ -23,11 +21,15 @@
             <engine:VisualElement name="AbilitySlot8" class="ability-slot" />
             <engine:VisualElement name="AbilitySlot9" class="ability-slot" />
         </engine:VisualElement>
-        
-        <engine:ProgressBar value="100" name="HealthBar" class="health-progress-bar"/>
+        <engine:VisualElement name="ItemsPanel" enabled="true" class="items-panel" style="margin-bottom: 10px;">
+            <engine:VisualElement name="ItemSlot1" class="item-slot" />
+            <engine:VisualElement name="ItemSlot2" class="item-slot" />
+            <engine:VisualElement name="ItemSlot3" class="item-slot" />
+            <engine:VisualElement name="ItemSlot4" class="item-slot" />
+            <engine:VisualElement name="ItemSlot5" class="item-slot" />
+            <engine:VisualElement name="ItemSlot6" class="item-slot" />
+        </engine:VisualElement>
+        <engine:ProgressBar value="100" name="HealthBar" class="health-progress-bar" />
         <engine:ProgressBar value="50" name="ManaBar" class="mana-progress-bar" />
-        
-        
-        
     </engine:VisualElement>
 </engine:UXML>

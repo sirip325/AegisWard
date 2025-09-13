@@ -10,6 +10,8 @@ public class PlayerHealth : MonoBehaviour, IHittable
 
     private void Start()
     {
+        
+        
         _playerHealthData = new PlayerHealthData(_maxHP);
         _healthBarUI = FindObjectOfType<HealthBarUI>().GetComponent<HealthBarUI>();
         
@@ -17,6 +19,7 @@ public class PlayerHealth : MonoBehaviour, IHittable
         _healthBarUI.SetBarMaxValue(_maxHP);
         
         _playerHealthData._health.Current.Subscribe(UpdateBar);
+        _playerHealthData._health.Max.Subscribe(_healthBarUI.SetBarMaxValue);
     }
 
     private void UpdateBar(float newValue)
